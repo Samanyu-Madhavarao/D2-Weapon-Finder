@@ -6,7 +6,67 @@
         <title>Destiny 2 Weapon Finder</title>
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
-        <script type="text/javascript"></script>
+    <body>        
+        <button type="button" class="collapsible">Ammo type</button>
+        <div class="content">
+            <button class="filter">
+                <img src="assets/images/Ammo/Primary.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Ammo/Special.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Ammo/Heavy.png" alt="Primary" width="50" height="50">
+            </button>
+        </div>
+
+        <button type="button" class="collapsible">Element</button>
+        <div class="content">
+            <button class="filter">
+                <img src="assets/images/Element/Kinetic.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Element/Arc.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Element/Solar.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Element/Void.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Element/Stasis.png" alt="Primary" width="50" height="50">
+            </button>
+            <button class="filter">
+                <img src="assets/images/Element/Strand.png" alt="Primary" width="50" height="50">
+            </button>
+        </div>
+
+        <button type="button" class="collapsible">Archetype</button>
+        <div class="content">
+            <p>This will have a bunch of ammo types (as in 3)</p>
+        </div>
+
+        <button type="button" class="collapsible">Rarity</button>
+        <div class="content">
+            <p>This will have a bunch of ammo types (as in 3)</p>
+        </div>
+
+
+        <script type="text/javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            for(i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function(){
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
     </body>
-</html>html
+</html>
